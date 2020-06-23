@@ -1,34 +1,50 @@
-
 #include<iostream>
-//#include<stdlib.h>
+#include<locale>
 
 using namespace std;
 
-int entrada, i, x, y;
+int entrada, i, x, y, lim;
+
+int caixa[10000];
+
+void processo();
 
 int main() {
 
+    setlocale(LC_ALL, "");
+
     while (1) {
         x = 0;
-        cin >> entrada;
+        cin >> lim;
 
-        cout << endl;
+        cout << endl << endl;
 
-        for (i = (entrada - 1); x == 0 && i > 1; i--)
+        processo();
+
+    }
+
+}
+
+
+void processo() {
+    y = 0;
+    for (entrada = lim; entrada > 1; entrada--)
+    {
+        x = 0;
+
+        for (i = 2; x == 0 && i < ((entrada / 2) + 1); i++)
         {
 
-            cout << "tentativa" << i << endl;
+          //  cout << "tentativa:" << i << endl << endl;
 
             if (((entrada % i) == 0)) { x = 1; }
-
         }
-
-        cout << endl;
-
-        if (x == 1) { cout << "n é"; }
-        else { cout << "é"; }
-
-        cout << endl;
+        if (x == 0)
+        {
+            caixa[y] = entrada;
+            cout << "primo " << y + 1 << " :" << caixa[y] << endl;
+            y++;
+        }
     }
 
 }

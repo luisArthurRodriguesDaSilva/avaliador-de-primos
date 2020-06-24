@@ -3,9 +3,9 @@
 
 using namespace std;
 
-int entrada, i, x, y, lim;
+int entrada, i, x, y, lim,j;
 
-int caixa[10000];
+int caixa[99999];
 
 void processo();
 
@@ -35,16 +35,28 @@ void processo() {
         for (i = 2; x == 0 && i < ((entrada / 2) + 1); i++)
         {
 
-          //  cout << "tentativa:" << i << endl << endl;
+          //cout << "tentativa:" << i << endl << endl;
 
             if (((entrada % i) == 0)) { x = 1; }
         }
+        
         if (x == 0)
         {
-            caixa[y] = entrada;
-            cout << "primo " << y + 1 << " :" << caixa[y] << endl;
-            y++;
+            caixa[y] = entrada;         //valor do y vai subindo e vão sendo adicionados os primos nos respectivos vetores
+            y++;                        //o valor de caixa[y] quando y tá igual a zero tá se igualando
+          
         }
     }
 
+
+    for (j = 1; y>0 and (caixa[y] != 0); y--)
+    {
+      
+        cout << "primo " << j << ":" << caixa[y] << endl;
+        j++;
+
+
+    }
+
 }
+

@@ -15,6 +15,7 @@ int main() {
 
     while (1) {
         x = 0;
+        y= 0;
         cin >> lim;
 
         cout << endl << endl;
@@ -27,7 +28,7 @@ int main() {
 
 
 void processo() {
-    y = 0;
+    
     for (entrada = lim; entrada > 1; entrada--)
     {
         x = 0;
@@ -42,19 +43,21 @@ void processo() {
         
         if (x == 0)
         {
-            caixa[y] = entrada;         //valor do y vai subindo e vão sendo adicionados os primos nos respectivos vetores
-            y++;                        //o valor de caixa[y] quando y tá igual a zero tá se igualando
+            caixa[y] = entrada;
+            y++;
           
         }
     }
 
 
-    for (j = 1; y>0 and (caixa[y] != 0); y--)
+    for (j = 1; y>0; y--)
     {
-      
-        cout << "primo " << j << ":" << caixa[y] << endl;
-        j++;
-
+    
+        if (caixa[y] != 0) 
+        {
+            cout << "primo " << j << ":" << caixa[y] << endl;
+            j++;
+        }
 
     }
 

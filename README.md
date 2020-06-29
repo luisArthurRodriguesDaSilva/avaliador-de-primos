@@ -1,5 +1,22 @@
 # avaliador-de-primos
 
+
+
+at this version,the error with the firsth result of the all outputs except the firsth output,got corrected with a "while" to clean memory.
+-----------------------------
+   while(j>0)
+        {
+        
+        caixa[y]=0;                  // correction
+        
+        j--;
+        y--;
+        }
+-------------------------------
+the problem that was fixed |
+                           |
+                          \   /       //sory to my perfect draw
+                            \/
 this brache have only problem.
 
 

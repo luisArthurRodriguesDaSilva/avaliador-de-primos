@@ -61,7 +61,7 @@ void processo() {
     }
 
 
-    for (j = 1; y>0; y--)
+    for (j = 1; y>=0; y--)
     {
     
         if (caixa[y] != 0) 

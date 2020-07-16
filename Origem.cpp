@@ -1,5 +1,6 @@
 #include<iostream>
 #include<locale>
+#include<cmath>
 
 using namespace std;
 
@@ -7,11 +8,9 @@ int entrada, i, x, y, lim,j;
 
 int caixa[99999];
 
-
 void processo();
 
 int main() {
-
 
     setlocale(LC_ALL, "");
 
@@ -23,15 +22,6 @@ int main() {
         cout << endl << endl;
 
         processo();
-        
-        while(j>0)
-        {
-        
-        caixa[y]=0;
-        
-        j--;
-        y--;
-        }
 
     }
 
@@ -44,12 +34,12 @@ void processo() {
     {
         x = 0;
 
-        for (i = 2;x==0 and i < ((entrada / 2) + 1); i++)
+        for (i = 2; x == 0 && i < ((sqrt(entrada)) + 1); i++)
         {
 
           //cout << "tentativa:" << i << endl << endl;
 
-            if (((entrada % i) == 0)) { x=1; }
+            if (((entrada % i) == 0)) { x = 1; }
         }
         
         if (x == 0)
@@ -61,7 +51,7 @@ void processo() {
     }
 
 
-    for (j = 1; y>=0; y--)
+    for (j = 1; y>0; y--)
     {
     
         if (caixa[y] != 0) 
@@ -71,6 +61,6 @@ void processo() {
         }
 
     }
-j=99999;
-y=99999;
+
 }
+

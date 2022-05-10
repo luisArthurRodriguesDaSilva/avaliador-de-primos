@@ -1,3 +1,4 @@
+
 #include<iostream>
 #include<locale>
 
@@ -74,3 +75,4 @@ void processo() {
 j=99999;
 y=99999;
 }
+
